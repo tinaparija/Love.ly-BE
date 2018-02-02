@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
-  Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    Values = require('./values');
 
 var UserSchema = new Schema({
   name: String,
@@ -8,8 +9,7 @@ var UserSchema = new Schema({
   image_url: String,
   description: String,
   location: String,
-  values:[ValuesSchema],
-
+  values:[Values.schema]
 });
 
 var User = mongoose.model('User', UserSchema);

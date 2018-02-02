@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var ValuesSchema = new Schema({
-  value_name: String,
+  name: String,
   priority: Number,
   score: Number
 });

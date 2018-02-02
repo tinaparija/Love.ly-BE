@@ -6,7 +6,7 @@ var MatchSchema = new Schema({
               type: Schema.Types.ObjectId,  //foreign key for user
               ref: 'User'
            }],
-  favourite:boolean
+  favourite: Boolean
 });
 
 var Match = mongoose.model('Match', MatchSchema);
