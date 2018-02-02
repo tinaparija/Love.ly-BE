@@ -3,36 +3,55 @@
 
 var db = require('./models');
 
-var projectsList = [{
-  projectsObj1KeyOne: 'keyOneValuePair',
-  projectsObj1keyTwo: 'keyOneValuePair',
-  projectsObj1keyThree: 'keyOneValuePair',
-  projectsObj1keyFourArray: [ 'arrayIndex0', 'arrayIndex1' ]
-}, {
-  artistName: 'Metallica',
-  name: 'Metallica',
-  releaseDate: '1991, August 12',
-  genres: [ 'heavy metal' ]
-}, {
-  artistName: 'The Prodigy',
-  name: 'Music for the Jilted Generation',
-  releaseDate: '1994, July 4',
-  genres: [ 'electronica', 'breakbeat hardcore', 'rave', 'jungle' ]
-}, {
-  artistName: 'Johnny Cash',
-  name: 'Unchained',
-  releaseDate: '1996, November 5',
-  genres: [ 'country', 'rock' ]
-}];
+var UsersList = [{
+                    name: "Adam",
+                    age: 25,
+                    gender: "M",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
+                    location: "225 Bush Street,SFO",
+                    values:[{name:"humour",priority:1,score:10},
+                            {name:"intelligence",priority:2,score:8},
+                            {name:"materialism",priority:3,score:5},
+                            {name:"empathy",priority:4,score:5},
+                            {name:"physical_needs",priority:5,score:5}]
+                 },
+                 {  name: "Nick",
+                    age: 26,
+                    gender: "M",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
+                    location: "225 Bush Street,SFO",
+                    values:[{name:"humour",priority:2,score:5},
+                            {name:"intelligence",priority:1,score:10},
+                            {name:"materialism",priority:4,score:5},
+                            {name:"empathy",priority:5,score:5},
+                            {name:"physical_needs",priority:4,score:5}]
+                 },
+                 {  name: "Angelina",
+                    age: 22,
+                    gender: "F",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
+                    location: "225 Bush Street,SFO",
+                    values:[
+                      {name: "humour", priority: 3,score: 10},
+                      {name: "intelligence", priority: 2, score: 8},
+                      {name: "materialism", priority: 1, score: 5},
+                      {name: "empathy", priority: 5, score: 5},
+                      {name: "physical_needs", priority: 4, score: 5}
+                    ]
+                 }
+];
 
 
-db.Project.remove({}, function(err, projects){
-  // code in here runs after all projects are removed
-  db.Project.create(projectsList, function(err, projects){
-    // code in here runs after all projects are created
+db.User.remove({}, function(err, users){
+  // code in here runs after all users are removed
+  db.User.create(UsersList, function(err, users){
+    // code in here runs after all users are created
     if (err) { return console.log('ERROR', err); }
-    console.log("all projects:", projects);
-    console.log("created", projects.length, "projects");
+    console.log("all users:", users);
+    console.log("created", users.length, "users");
     process.exit();
   });
 });
