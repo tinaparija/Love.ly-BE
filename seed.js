@@ -9,24 +9,14 @@ var UsersList = [{
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
-                    location: "225 Bush Street,SFO",
-                    values:[{name:"humour",priority:1,score:10},
-                            {name:"intelligence",priority:2,score:8},
-                            {name:"materialism",priority:3,score:5},
-                            {name:"empathy",priority:4,score:5},
-                            {name:"physical_needs",priority:5,score:5}]
+                    location: "225 Bush Street,SFO"
                  },
                  {  name: "Nick",
                     age: 26,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
-                    location: "225 Bush Street,SFO",
-                    values:[{name:"humour",priority:2,score:5},
-                            {name:"intelligence",priority:1,score:10},
-                            {name:"materialism",priority:4,score:5},
-                            {name:"empathy",priority:5,score:5},
-                            {name:"physical_needs",priority:4,score:5}]
+                    location: "225 Bush Street,SFO"
                  },
                  {  name: "Angelina",
                     age: 22,
@@ -34,16 +24,20 @@ var UsersList = [{
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
                     location: "225 Bush Street,SFO",
-                    values:[
-                      {name: "humour", priority: 3,score: 10},
-                      {name: "intelligence", priority: 2, score: 8},
-                      {name: "materialism", priority: 1, score: 5},
-                      {name: "empathy", priority: 5, score: 5},
-                      {name: "physical_needs", priority: 4, score: 5}
-                    ]
-                 }
-];
+                 }];
 
+
+var ValuesList = 
+  [{name:"humour",priority:1,score:10},
+  {name:"intelligence",priority:2,score:15},
+  {name:"materialism",priority:3,score:25},
+  {name:"empathy",priority:4,score:15},
+  {name:"physical_needs",priority:5,score:15}];
+
+
+UsersList.forEach(function(user) {
+  user.values = ValuesList;
+});
 
 db.User.remove({}, function(err, users){
   // code in here runs after all users are removed

@@ -1,6 +1,8 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Values = require('./values');
+    Values = require('./values'),
+    Match = require('./match');
+
 
 var UserSchema = new Schema({
   name: String,
@@ -9,7 +11,8 @@ var UserSchema = new Schema({
   image_url: String,
   description: String,
   location: String,
-  values:[Values.schema]
+  values:[Values.schema],
+  matches:[Match.schema]
 });
 
 var User = mongoose.model('User', UserSchema);
