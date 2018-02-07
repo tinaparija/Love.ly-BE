@@ -8,14 +8,15 @@ var UsersList = [{
                     age: 29,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
-                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ",
-                    location: "225 Bush Street,DC"
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+                    location: "225 Bush Street,SFO"
+
                  },
                  {  name: "Nick",
                     age: 26,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
-                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
                     location: "225 Bush Street,SFO"
                  },
                  {  name: "Jessica",
@@ -43,7 +44,7 @@ var UsersList = [{
                     age: 22,
                     gender: "F",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
-                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
                     location: "225 Bush Street,SFO",
                  }];
 
