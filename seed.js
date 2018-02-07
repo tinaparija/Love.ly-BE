@@ -5,14 +5,35 @@ var db = require('./models');
 
 var UsersList = [{
                     name: "Adam",
-                    age: 25,
+                    age: 29,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ",
-                    location: "225 Bush Street,SFO"
+                    location: "225 Bush Street,DC"
                  },
                  {  name: "Nick",
                     age: 26,
+                    gender: "M",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    location: "225 Bush Street,SFO"
+                 },
+                 {  name: "Jessica",
+                    age: 26,
+                    gender: "F",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    location: "225 Bush Street,SFO"
+                 },
+                 {  name: "Amy",
+                    age: 24,
+                    gender: "F",
+                    image_url: "https://profile.actionsprout.com/default.jpeg",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    location: "225 Bush Street,SFO"
+                 },
+                 {  name: "Chuck",
+                    age: 27,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
