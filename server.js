@@ -50,5 +50,5 @@ app.use(router);
 
 // listen on the port that Heroku prescribes (process.env.PORT) OR port 3000
 app.listen(process.env.PORT || 8080, function () {
-  console.log('Express server is up and running on http://localhost:8080/');
+  console.log('Express server is up and running on https://localhost:8080/');
 });
