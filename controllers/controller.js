@@ -38,7 +38,7 @@ function add_user_values(req, res) {
           user.values.push(value);
           user.save();
           console.log("before match called");
-          find_match(user, req);
+          find_match(user);
           console.log("after match called");
           res.json(user);
         }
@@ -57,6 +57,7 @@ function update_user(req, res) {
         find_match(user);
         res.json(user);
       }
+
    });
 
 }
