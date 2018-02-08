@@ -54,9 +54,10 @@ function update_user(req, res) {
   		{$set: req.body}, {"new":true}, function(err, user){
      	if (err) res.send(err);
      	else {
-            find_match(user);
-            res.json(user);
-          }
+        find_match(user);
+        res.json(user);
+      }
+
    });
 
 }
