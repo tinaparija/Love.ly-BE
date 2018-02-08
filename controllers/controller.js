@@ -54,8 +54,7 @@ function update_user(req, res) {
   		{$set: req.body}, {"new":true}, function(err, user){
      	if (err) res.send(err);
      	else {
-        find_match(user);
-        res.json(user);
+        find_match(user, res);
       }
 
    });
@@ -80,7 +79,7 @@ function delete_user(req, res) {
 }
 
 
-function find_match(savedUser){
+function find_match(savedUser, res){
      //get all users from db except the current user who has taken test.({_id!==req.params._id})
      User.find({'_id': {$ne: new ObjectID(savedUser._id)}}, function(err, users) {
        if (err) {
@@ -110,7 +109,14 @@ function find_match(savedUser){
                   console.log("possible matches: " +savedUser.matches);
                }
            }
-           savedUser.save();
+           savedUser.save(function(err,saved){
+             if(err){
+               res.send(err);
+             }
+             else{
+               res.json(saved);
+             }
+           });
            //loop through the savedUser.matches array and update each of their matches array with this new savedUser.user_id
            if(savedUser.matches){
               for(let idx=0; idx<users.length;idx++){
