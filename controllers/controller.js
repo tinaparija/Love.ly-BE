@@ -15,7 +15,6 @@ function index_users(req, res) {
 function create_user(req, res) {
    User.create(req.body, function(err, user) {
     if (err) { console.log('error', err); }
-    find_match(user);
     res.json(user);
   });
 
@@ -39,7 +38,7 @@ function add_user_values(req, res) {
           user.values.push(value);
           user.save();
           console.log("before match called");
-          find_match(user, req);
+          find_match(user);
           console.log("after match called");
           res.json(user);
         }
@@ -54,7 +53,10 @@ function update_user(req, res) {
 	User.findByIdAndUpdate(req.params.user_id,
   		{$set: req.body}, {"new":true}, function(err, user){
      	if (err) res.send(err);
-     	else res.json(user);
+     	else {
+        find_match(user, res);
+      }
+
    });
 
 }
@@ -77,7 +79,7 @@ function delete_user(req, res) {
 }
 
 
-function find_match(savedUser){
+function find_match(savedUser, res){
      //get all users from db except the current user who has taken test.({_id!==req.params._id})
      User.find({'_id': {$ne: new ObjectID(savedUser._id)}}, function(err, users) {
        if (err) {
@@ -107,7 +109,14 @@ function find_match(savedUser){
                   console.log("possible matches: " +savedUser.matches);
                }
            }
-           savedUser.save();
+           savedUser.save(function(err,saved){
+             if(err){
+               res.send(err);
+             }
+             else{
+               res.json(saved);
+             }
+           });
            //loop through the savedUser.matches array and update each of their matches array with this new savedUser.user_id
            if(savedUser.matches){
               for(let idx=0; idx<users.length;idx++){

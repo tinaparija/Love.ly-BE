@@ -17,6 +17,8 @@ var UsersList = [{
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
                     location: "San Francisco, CA"
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+                    location: "225 Bush Street,SFO"
                  },
                  {  name: "Jessica",
                     age: 26,
@@ -43,7 +45,7 @@ var UsersList = [{
                     age: 22,
                     gender: "F",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
-                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
                     location: "225 Bush Street,SFO",
                  }];
 
