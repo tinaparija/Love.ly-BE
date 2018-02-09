@@ -1,25 +1,27 @@
 {
-  "name": "express-personal-api",
+  "name": "love-ly-be",
   "version": "1.0.0",
-  "description": "Build an API about yourself",
+  "description": "A website for finding love matches.",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.4",
+    "nodemon": "^1.14.12"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SF-WDI-LABS/express-personal-api.git"
+    "url": "git+https://github.com/AdamMenard/Love.ly-BE.git"
   },
-  "author": "GA SF WDI",
+  "author": "Adam Sweetha Patrick Tina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SF-WDI-LABS/express-personal-api/issues"
+    "url": "https://github.com/AdamMenard/Love.ly-BE/issues"
   },
-  "homepage": "https://github.com/SF-WDI-LABS/express-personal-api",
-  "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.10",
-    "nodemon": "^1.14.0"
-  }
+  "homepage": "https://github.com/AdamMenard/Love.ly-BE#readme"
 }

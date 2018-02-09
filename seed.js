@@ -8,36 +8,36 @@ var UsersList = [{
                     age: 29,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
-                    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ",
-                    location: "225 Bush Street,DC"
+                    description: "I am a sensitive guy.  I have dog that I take care of and she means the world to me.",
+                    location: "Daly City, CA"
                  },
                  {  name: "Nick",
                     age: 26,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-                    location: "225 Bush Street,SFO"
+                    location: "San Francisco, CA"
                  },
                  {  name: "Jessica",
                     age: 26,
                     gender: "F",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-                    location: "225 Bush Street,SFO"
+                    location: "Oakridge, San Carlos"
                  },
                  {  name: "Amy",
                     age: 24,
                     gender: "F",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-                    location: "225 Bush Street,SFO"
+                    location: "Downtown, San Mateo"
                  },
                  {  name: "Chuck",
                     age: 27,
                     gender: "M",
                     image_url: "https://profile.actionsprout.com/default.jpeg",
                     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-                    location: "225 Bush Street,SFO"
+                    location: "Portland"
                  },
                  {  name: "Angelina",
                     age: 22,
