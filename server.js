@@ -4,6 +4,7 @@
 var express = require('express');
 var app = express();
 var router = require('./config/routes.js');
+require('dotenv').config();
 
 // parse incoming urlencoded form data
 // and populate the req.body object
